@@ -128,3 +128,95 @@
 // }
 // else { console.log("На счете недостаточно средств для проведения операции!") }
 // console.log("Операция завершена!")
+
+
+// --------------МАССИВЫ (ARRAYS)---------------
+
+
+// const string = "Real Madrid";
+// for (const character of string) {
+//     console.log(character);
+// }
+
+// const players = ["Thibaut Courtois", "Marcelo Vieira", "David Alaba", "Eder Militao", "Dani Carvajal", "Luka Modric", "Toni Kroos", "Casemiro", "Isco Alarcon", "Fede Valverde", "Marco Asensio", "Lucas Vazquez", "Rodrygo", "Gareth Bale", "Karim Benzema", "Eden Hazard", "Vinicius Junior"]
+// const playerNameToFind = "Raul Gonzalez";
+// let message = "There is no such player in the list!";;
+
+// for (const player of players) {
+//     if (player === playerNameToFind) {
+//         message = "There is such player in the list!";
+//         break;
+//     }
+// }
+// console.log(message);
+
+// const numbers = [17, 4, 66, 2, 32, 15, 4, 43, 19, 85, 50, 3, 77];
+// const threshold = 21;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] < threshold) {
+//         continue;
+//     }
+//     console.log(`Numbers greater than ${threshold} are as follow: ${numbers[i]}`);
+// }
+
+// const word = "Real Madrid";
+// console.log(word.split(" "));
+
+// const words = ["Real", "Madrid"];
+// console.log(words.join(" "));
+
+// const clients = ["Mango", "Ajax"];
+// console.log(clients.indexOf("Ajax"));
+
+// const redFruits = ["apple", "strawberry", "cranberry", "cherry"];
+// const fruit = "cherry";
+// const hasFruit = redFruits.includes(fruit);
+
+// if (hasFruit) {
+//     console.log(`${fruit} is a red fruit!`);
+// }
+
+// const scores = [1, 2, 3, 4, 5];
+// const deletedScores = scores.splice(0, 2);
+// console.log(scores);
+// console.log(deletedScores);
+
+// const colors = ["red", "blue", "yellow"];
+// colors.splice(2, 0, "white");
+// console.table(colors);
+
+// const cart = [54, 28, 105, 70, 92, 17, 120];
+
+// let total = 0;
+
+// for (let i = 0; i < cart.length; i += 1) {
+//     console.log(cart[i]);
+//     total += cart[i];
+// }
+// console.log("Total:", total);
+
+// for (const cartItem of cart) {
+//     console.log(cartItem);
+//     total += cartItem;
+// }
+// console.log("Total:", total);
+
+// for (const cartItem of cart) {
+//     if (cartItem % 2 !== 0) {
+//         continue;
+//     }
+//     console.log(cartItem);
+//     total += cartItem;
+// }
+// console.log("Total:", total);
+
+const numbers = [51, 18, 13, 24, 7, 85, 19];
+let smallestNumber = numbers[0];
+
+for (const number of numbers) {
+    if (number < smallestNumber) {
+        smallestNumber = number;
+    }
+}
+console.log("SmallestNumber:", smallestNumber);
