@@ -211,12 +211,67 @@
 // }
 // console.log("Total:", total);
 
-const numbers = [51, 18, 13, 24, 7, 85, 19];
-let smallestNumber = numbers[0];
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallestNumber = numbers[0];
 
-for (const number of numbers) {
-    if (number < smallestNumber) {
-        smallestNumber = number;
-    }
-}
-console.log("SmallestNumber:", smallestNumber);
+// for (const number of numbers) {
+//     if (number < smallestNumber) {
+//         smallestNumber = number;
+//     }
+// }
+// console.log("SmallestNumber:", smallestNumber);
+
+// function withdraw(amount, balance) {
+//     if (amount === 0) {
+//         console.log("Для проведения операции введите сумму больше нуля");
+//         return;
+//     }
+
+//     if (amount > balance) {
+//         console.log("Недостаточно средств на счете");
+//         return;
+//     }
+
+//     console.log("Операция прошла успешно");
+// }
+
+// withdraw(0, 300); 
+// withdraw(500, 300); 
+// withdraw(100, 300);
+
+// const calculateTotalPrice = function (items) {
+//     let total = 0;
+
+//     for (const item of items) {
+//         total += item;
+//     }
+//     return total;
+// }
+
+// const r1 = calculateTotalPrice([1, 2, 3]);
+// console.log(`Общая сумма покупок составляет ${r1} кредитов`);
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
+
+// const logins = ['poly', 'k1widab3st'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//     return allLogins.includes(loginToFind) ? `Пользователь ${loginToFind} найден` :
+//         `Пользователь ${loginToFind} не найден`;
+// }
+
+// console.log(findLogin(logins, 'avocod3r'));
+// console.log(findLogin(logins, 'k1widab3st'));
+
+// const add = function (...args) {
+//     console.log(args);
+
+//     let total = 0;
+//     for (const arg of args) {
+//         total += arg;
+//     }
+//     return total;
+// }
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5));
