@@ -273,3 +273,93 @@
 
 // console.log(add(1, 2, 3));
 // console.log(add(1, 2, 3, 4, 5));
+// _________________________________________________________________
+// const djName = "Axwell";
+// const trackName = "Barricade";
+
+// const playlist = {
+//     name: "Мой супер плейлист",
+//     rating: 5,
+//     tracks: ["трек-1", "трек-2", "трек-3"],
+//     [djName]: trackName, //имя ключа из переменной через [], значение св-ва просто имя переменной 
+//     // getName: function () {
+//     //     console.log('Ага это getName :)');
+//     // },
+//     changeName(newName) {
+//         console.log(this); // это современный синтаксис объявления функции в значении ключа объекта - это метод объекта
+//         this.name = newName;
+//     },
+//     addTrack(track) {
+//         this.tracks.push(track);
+//         this.trackCount = this.tracks.length;
+//     },
+//     updatedRating(newRating) {
+//         this.rating = newRating;
+//     },
+//     getTrackCount() {
+//         return this.tracks .length;
+//     }
+// };
+
+// playlist.changeName("Новое имя");
+
+// playlist.addTrack("Новый трек");
+
+// playlist.updatedRating(4);
+
+// playlist.getTrackCount();
+
+// playlist.public = true; // добавляем новое св-во в объект или переопределяем уже существующее
+
+// const propertyName = "tracks";
+
+// console.log(playlist);
+// // console.log(playlist.tracks);
+// // console.log(playlist["rating"]); // это равноценно тому что на строку выше
+// // console.log(playlist[propertyName]); //к ключу, кот записан в переменной через []
+// ______________________________________________________
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// };
+// let totalFeedback = 0;
+
+// // const keys = Object.keys(feedback);
+// // console.log(keys);
+
+// // for (const key of keys) {
+// //     console.log(key);
+// //     console.log(feedback[key]);
+// // }
+
+// const values = Object.values(feedback);
+// console.log(values);
+
+// for (const value of values) {
+//     totalFeedback += value;
+// }
+// console.log("Total feedback:", totalFeedback);
+// _________________________________________________________________
+
+// const friends = [
+//     { name: "Mango", online: false },
+//     { name: "Kiwi", online: true },
+//     { name: "Poly", online: true },
+//     { name: "Ajax", online: false },
+// ];
+// console.table(friends);
+
+// const findFriendByName = function (allFriends, friendName) {
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         console.log(friend.name);
+//         if (friend.name === friendName) {
+//             return "НАШЛИ!";
+//         }
+//     }
+//     return "НЕ НАШЛИ!";
+// }
+
+// console.log(findFriendByName(friends, "Poly"));
+// console.log(findFriendByName(friends, "Chelsy"));
