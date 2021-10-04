@@ -363,3 +363,81 @@
 
 // console.log(findFriendByName(friends, "Poly"));
 // console.log(findFriendByName(friends, "Chelsy"));
+
+// _______________________________________________________________________
+// const temps = [14, -4, 25, 8, 11];
+// console.log(...temps);
+// console.log(Math.min(...temps));
+
+// const oldTemps = [14, 25, 11];
+// const newTemps = [23, 17, 18];
+// const allTemps = [...oldTemps, ...newTemps];
+// console.log(allTemps);
+
+// const first = {
+//     propA: 5,
+//     propB: 10,
+// }
+// const second = {
+//     propB: 15,
+//     propC: 20,
+// }
+// const third = {
+//     ...first, ...second,
+// }
+// console.log(third);
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//     console.log(otherArgs);
+// }
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// const book = {
+//     title: "The name",
+//     author: "The author",
+// }
+
+// const { title: firstTitle, author: firstAuthor, coverImage: firstCoverImage = "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg", } = book;
+
+// const message = `Книга ${firstTitle} автора ${firstAuthor}`
+// console.log(message);
+// console.log(firstCoverImage);
+
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "На берегу спокойных вод",
+//         author: "Роберт Шекли",
+//         rating: 8.51,
+//     },
+// ];
+
+// // for (const book of books) {
+// //     const { title, author, rating } = book;
+// //     console.log(title);
+// //     console.log(author);
+// //     console.log(rating);
+// // }
+
+// for (const { title, author, rating } of books) {
+//     console.log(title);
+//     console.log(author);
+//     console.log(rating);
+// }
+// _______________________________________________________________
+// function doStuffWithBook({ title, numberOfPages, downloads }) {
+//     console.log(title);
+//     console.log(numberOfPages);
+// }
+// doStuffWithBook({
+//     title: "The Last Kingdom",
+//     numberOfPages: 736,
+//     downloads: 10283,
+//     rating: 8.38,
+//     public: true,
+// });
