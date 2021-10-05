@@ -441,3 +441,84 @@
 //     rating: 8.38,
 //     public: true,
 // });
+
+// const authors = {
+//     kiwi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 6,
+// }
+
+// const ratings = Object.values(authors);
+
+// console.log(ratings);
+// __________________________________________________________________
+
+// const cart = {
+//     items: [],
+//     getItems() {
+//         return this.items;
+//     },
+//     add(product) {
+
+//         for (const item of this.items) {
+//             console.log(item);
+//             if (item.name === product.name) {
+//                 item.quantity += 1;
+//                 return;
+//             }
+//         }
+//         const newProduct = {
+//             ...product,
+//             quantity: 1,
+//         };
+
+//         this.items.push(newProduct);
+//      },
+//     remove(productName) {
+//         const { items } = this;
+
+//         for (let i = 0; i < items.length; i += 1) {
+//             const item = items[i];
+
+//             if (productName === item.name) {
+//                 console.log("Нашли продукт!", productName);
+//                 console.log(i);
+
+//                 items.splice(i, 1);
+//             }
+//         }
+
+//     },
+//     clear() {
+//         this.items = [];
+//     },
+//     countTotalPrice() {
+//         const { items } = this;
+
+//         let total = 0;
+    
+//         for (const {price, quantity} of items) {
+//             total += price * quantity;
+//         }
+//         return total;
+//     },
+//     increaseQuantity(productName) { },
+//     decreaseQuantity(productName) { },
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: 'apple', price: 50 });
+// cart.add({ name: 'lemon', price: 60 });
+// cart.add({ name: "strawberry", price: 110 });
+// cart.add({ name: "strawberry", price: 110 });
+// console.table(cart.getItems());
+
+// console.log("Total:", cart.countTotalPrice());
+
+// cart.remove('lemon');
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
