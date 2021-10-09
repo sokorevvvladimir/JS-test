@@ -503,8 +503,20 @@
 //         }
 //         return total;
 //     },
-//     increaseQuantity(productName) { },
-//     decreaseQuantity(productName) { },
+//     increaseQuantity(productName) {
+//         for (const item of this.items) {
+//             if (productName === item.name) {
+//                 item.quantity += 1;
+//             }
+//         }
+//      },
+//     decreaseQuantity(productName) {
+//         for (const item of this.items) {
+//             if (productName === item.name) {
+//                 item.quantity -= 1;
+//             }
+//         }
+//     },
 // };
 
 // console.log(cart.getItems());
@@ -520,5 +532,13 @@
 // cart.remove('lemon');
 // console.table(cart.getItems());
 
-// cart.clear();
-// console.log(cart.getItems());
+// // cart.clear();
+// // console.log(cart.getItems());
+
+// // cart.increaseQuantity('apple');
+// // console.table(cart.getItems());
+
+// cart.decreaseQuantity("strawberry");
+// console.table(cart.getItems());
+
+// ____________________________________________________________________
