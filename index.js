@@ -542,3 +542,240 @@
 // console.table(cart.getItems());
 
 // ____________________________________________________________________
+
+// function greet(name) {
+//     console.log(`Добро пожаловать, ${name}.`);
+// }
+
+// function registerGuest(name, callback) {
+//     console.log(`Регистрируем гостя ${name}.`);
+//     callback(name);
+// }
+
+// // registerGuest("Манго", greet);
+
+// // Ниже инлайн колбэк
+
+// registerGuest("Манго", function greet(name) {
+//     console.log(`Добро пожаловать, ${name}.`);
+// });
+// _______________________________________________________________
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//     const isRecipientAvailable = Math.random() > 0.5;
+
+//     if (!isRecipientAvailable) {
+//         onNotAvailable(recipient);
+//         return;
+//     }
+//     onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//     console.log(`Соединяем с ${name}, ожидайте...`);
+// }
+
+// function activateAnsweringMachine(name) {
+//     console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+// }
+
+// function leaveHoloMessage(name) {
+//     console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+// }
+
+// // processCall("Манго", takeCall, activateAnsweringMachine);
+// processCall("Поли", takeCall, leaveHoloMessage);
+// _____________________________________________________________________
+
+// function repeatLog(n) {
+//     for (let i = 0; i < n; i += 1) {
+//         console.log(i);
+//     }
+// }
+
+// repeatLog(5);
+
+// _______________________________________________________________
+
+// function printValue(value) {
+//     console.log(value);
+// }
+
+// function repeat(n, action) {
+//     for (let i = 0; i < n; i += 1) {
+//         action(i);
+//     }
+// }
+
+// repeat(3, printValue);
+// ______________________________________________________________
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// numbers.forEach(function (number, index) {
+//     console.log(`Индекс ${index}, значение ${number}`);
+// });
+// _______________________________________________________________
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// numbers.forEach((number, index) => {
+//     console.log(`Индекс ${index}, значение ${number}.`)
+// });
+// ___________________________________________________________________
+// const pureMultiply = (array, value) => {
+//     const newArray = [];
+
+//     array.forEach(element => {
+//         newArray.push(element * value);
+//     });
+
+//     return newArray;
+// };
+
+// const numbers = [1, 2, 3, 4, 5];
+// const doubledNumbers = pureMultiply(numbers, 2);
+
+// console.log(numbers);
+// console.log(doubledNumbers);
+// ___________________________________________________________________
+// const values = [51, -3, 27, 21, -68, 42, -37];
+
+// const positiveValues = values.filter(value => value >= 0);
+// console.log(positiveValues);
+
+// const negativeValues = values.filter(value => value < 0);
+// console.log(negativeValues);
+// _______________________________
+// const students = [
+//   { name: "Манго", courses: ["математика", "физика"] },
+//   { name: "Поли", courses: ["информатика", "математика"] },
+//   { name: "Киви", courses: ["физика", "биология"] },
+// ];
+
+// const allCourses = students.flatMap(student => student.courses);
+
+// const uniqueCourses = allCourses.filter(
+//     (course, index, allCourses) => allCourses.indexOf(course) === index
+// );
+// console.log(uniqueCourses);
+// _________________________________
+// const LOW_SCORE = 50;
+// const HIGH_SCORE = 80;
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Поли", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Киви", score: 94 },
+//   { name: "Хьюстон", score: 64 },
+// ];
+
+// const best = students.filter(student => student.score >= HIGH_SCORE);
+// console.log(best);
+
+// const worst = students.filter(student => student.score < LOW_SCORE);
+// console.log(worst);
+
+// const average = students.filter(
+//     ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
+// );
+// console.log(average);
+// _______________________________________
+// const total = [1, 7, 3, 14, 6].reduce((previousValue, number) => {
+//     return previousValue + number;
+// }, 0);
+// console.log(total);
+// ___________________________________________
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Поли", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Киви", score: 94 },
+//   { name: "Хьюстон", score: 64 },
+// ];
+
+// // Название аккумулятора может быть произвольным, это просто параметр функции
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+
+// const averageScore = Math.round(totalScore / students.length);
+// console.log(averageScore);
+// __________________________________________
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// // Пройдем по всем элементам коллекции и прибавим значения свойства likes
+// // к аккумулятору, начальное значение которого укажем 0.
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(likes); // 32
+
+// // Наверное подсчет лайков не одиночная операция, поэтому напишем функцию
+// // для подсчета лайков из коллекции
+// const countLikes = tweets => tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(countLikes(tweets)); // 32
+// _________________________________________________
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// // Пройдем по всем элементам коллекции и добавим значения свойства tags
+// // к аккумулятору, начальное значение которого укажем пустым массивом [].
+// // На каждой итерации пушим в аккумулятор все элементы tweet.tags и возвращаем его.
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+
+//   return allTags;
+// }, []);
+
+// console.log(tags);
+
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Поли", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Киви", score: 94 },
+// ];
+
+// const inAscendingScoreOrder = students.sort(
+//   (a, b) => a.score - b.score
+// );
+
+// console.log(inAscendingScoreOrder);
+
+// const inDescendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+
+// console.log(inDescendingScoreOrder);
+// _______________________________________
+// const students = [
+//   { name: "Манго", score: 83, courses: ["математика", "физика"] },
+//   { name: "Поли", score: 59, courses: ["информатика", "математика"] },
+//   { name: "Аякс", score: 37, courses: ["физика", "биология"] },
+//   { name: "Киви", score: 94, courses: ["литература", "информатика"] },
+// ];
+
+// // const sortedByAscendingScore = [...students].sort((a, b) => a.score - b.score);
+// // console.log(sortedByAscendingScore);
+
+// // const names = sortedByAscendingScore.map(student => student.name);
+
+// // console.log(names);
+
+// const uniqueSortedCourses = students
+//     .flatMap(student => student.courses)
+//     .filter((course, index, array) => array.indexOf(course) === index)
+//     .sort((a, b) => a.localeCompare(b));
+
+// console.log(uniqueSortedCourses);
