@@ -779,3 +779,59 @@
 //     .sort((a, b) => a.localeCompare(b));
 
 // console.log(uniqueSortedCourses);
+
+// _____________________________________
+// const allTags = ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"];
+
+// const tagStats = allTags.reduce((acc, tag) => {
+//     if (acc[tag]) {   //если в аккумуляторе (в данном случае - это пустой массив) имеется свойство с таким ключом, то увеличь его значение на 1
+//         // acc[tag] += 1;
+//         return {
+//             ...acc,
+//             [tag]: acc.tag + 1
+//         };
+//     }
+
+//     // acc[tag] = 1; //если нет свойства с таким ключом, запиши такое свойство и поставь количество один
+
+//     return {
+//         ...acc,
+//         [tag]: 1
+//     };
+// }, {});
+
+// console.log(tagStats);
+
+// ___________________________________________
+
+// const allTags = ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"];
+
+// const tagStats = allTags.reduce((acc, tag) => {
+//     // if (acc[tag]) {   //если в аккумуляторе (в данном случае - это пустой массив) имеется свойство с таким ключом, то увеличь его значение на 1
+//     //     // acc[tag] += 1;
+//     //     return {
+//     //         ...acc,
+//     //         [tag]: acc.tag + 1
+//     //     };
+//     // }
+
+//     // acc[tag] = 1; //если нет свойства с таким ключом, запиши такое свойство и поставь количество один
+
+//     return {
+//         ...acc,
+//         [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//     };
+// }, {});
+
+// console.log(tagStats);
+
+const allTags = ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"];
+
+const tagStats = allTags.reduce(
+    (acc, tag) => ({
+        ...acc,
+        [tag]: acc[tag] ? acc[tag] + 1 : 1,
+    }),
+    {},
+);
+console.log(tagStats);
