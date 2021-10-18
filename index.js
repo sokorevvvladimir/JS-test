@@ -825,13 +825,166 @@
 
 // console.log(tagStats);
 
-const allTags = ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"];
+// const allTags = ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"];
 
-const tagStats = allTags.reduce(
-    (acc, tag) => ({
-        ...acc,
-        [tag]: acc[tag] ? acc[tag] + 1 : 1,
-    }),
-    {},
-);
-console.log(tagStats);
+// const tagStats = allTags.reduce(
+//     (acc, tag) => ({
+//         ...acc,
+//         [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//     }),
+//     {},
+// );
+// console.log(tagStats);
+// ____________________________
+// const user = {
+//     name: "Mango",
+//     // location: {
+//     //     city: "Lviv",
+//     // },
+// };
+
+// console.log(user?.location?.city);
+// ____________________________
+
+// const doMath = function (a, b, callback) {
+//     const result = callback(a, b);
+
+//     console.log(result);
+// };
+
+// // const add = function (x, y) {
+// //     return x + y;
+// // };
+
+// // const sub = function (x, y) {
+// //     return x - y;
+// // };
+
+// doMath(10, 7, function (x, y) {
+//     return x - y;
+// });
+// doMath(2, 3, function (x, y) {
+//     return x + y;
+// });
+// ______________________________________
+
+// const buttonRef = document.querySelector('.js-button');
+
+// const handleBtnClick = function () {
+//     console.log('Клик по кнопке ' + Date.now());
+// };
+
+// buttonRef.addEventListener('click', handleBtnClick);
+// _________________________________________________
+
+// const onGetPositionSuccess = function (position) {
+//     console.log(position);
+// };
+
+// const onGetPositionError = function (error) {
+//     console.log(error);
+// };
+
+// window.navigator.geolocation.getCurrentPosition(
+//     onGetPositionSuccess,
+//     onGetPositionError,
+// );
+// _______________________________________
+
+// const fnA = function (parameter) {
+//     const innerVariable = "значение внутренней переменной функции fnA";
+
+//     const innerFunction = function () {
+//         console.log(parameter);
+//         console.log(innerVariable);
+//         console.log("Это вызов innerFunction");
+//     };
+//     return innerFunction;
+// };
+
+// const fnB = fnA(555);
+
+// fnB();
+
+// console.log(fnB);
+// _________________________________
+
+// const makeSheff = function (name) {
+//     const makeDish = function (dish) {
+//         console.log(`${name} готовит ${dish}`);
+        
+//     };
+//     return makeDish;
+// };
+
+// const mango = makeSheff('Mango');
+
+// mango('котлеты');
+// mango('пирожок');
+
+// console.dir(mango);
+
+// const poly = makeSheff("Poly");
+
+// poly('чай');
+// poly('омлет');
+// _____________________________________
+
+// const salaryManagerFactory = function (employeeName, baseSalary = 0) {
+//     let salary = baseSalary;
+
+//     return {
+//         raise(amount) {
+//             if (amount > 1000) {
+//                 return "Ты офигел?";
+//             };
+//             salary += amount;
+//         },
+//         lower(amount) {
+//             salary -= amount;
+//         },
+//         current() {
+//             return `Текущая зарплата ${employeeName} - ${salary}`
+//         },
+//     };
+// };
+
+// const salaryManager = salaryManagerFactory('Mango', 5000);
+
+// console.log(salaryManager.current());
+// console.log(salaryManager.raise(1000000));
+// ___________________________________
+
+// class User {
+//     #email;
+//     static Roles = {
+//         ADMIN: "admin",
+//         EDITOR: "editor",
+//     };
+
+//     constructor({ name, email }) {
+//         this.name = name;
+//         this.#email = email;
+//     }
+//     getEmail() {
+//         return this.#email;
+//     }
+//     changeEmail(newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
+
+// const mango = new User({ name: "Mango", email: "mango@mail.com"});
+// console.log(mango);
+// mango.changeEmail("mango@supermail.com");
+// console.log(mango.getEmail());
+// console.log(mango.role);
+
+// class ContentEditor extends User {
+//     //
+// }
+
+// const editor = new ContentEditor("mango@mail.com");
+// console.log(editor);
+
+// ____________________________
