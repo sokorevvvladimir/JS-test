@@ -988,3 +988,67 @@
 // console.log(editor);
 
 // ____________________________
+
+// const objC = {
+//     z: 5
+// };
+
+// const objB = Object.create(objC);
+
+// console.log(objC);
+// console.log(objB.hasOwnProperty('z'));
+// ____________________________
+// const Car = function ({ brand, model, price }) {
+//     this.brand = brand;
+//         this.model = model;
+//         this.price = price;
+// }; // это класс, функция - конструктор
+ 
+// Car.prototype.changePrice = function (newPrice) { //только у функции-конструктора есть свойство prototype
+//     this.price = newPrice; // свойства накидывают и хранят в прототайпе, а не в функции-конструкторе, чтобы при создании нового объекта не копировались все свойства в новый объект, а так они будут лежить вглубине в одном месте и использоваться по мере надобности!
+// };
+// console.log(Car.prototype);
+
+// const myCar = new Car({
+//     brand: 'BMW',
+//     model: 'X6',
+//     price: 50000,
+// }); // это экземпляр 
+
+// console.log(myCar);
+// ___________________________
+
+// class Car1 {
+//     constructor({brand, model, price} = {}) {
+//         this.brand = brand;   //свойства для экземпляра прописывать через this
+//         this._model = model;
+//         this.price = price;
+//     }
+//     changePrice(newPrice) { //методы класса пойдут в прототайп
+//         this.price = newPrice;
+//     }
+//     get model() {
+//         return this._model;
+//     }
+//     set model(newModel) {
+//         this._model = newModel;
+//     }
+// }
+// // console.dir(Car1);
+
+// const carInstance = new Car1({ //вызываем через оператор Нью
+//     brand: 'Audi',
+//     model: 'Q3',
+//     price: 35000,
+// });
+
+// console.log(Object.getPrototypeOf(carInstance) === Car1.prototype)
+
+// console.log(carInstance);
+
+// console.log(carInstance.model);
+
+// carInstance.model = "Q4";
+
+// console.log(carInstance.model);
+// _________________________________
