@@ -4,7 +4,6 @@
 
 // a = 10;
 
-
 // console.log(a);
 // console.log(b);
 
@@ -41,7 +40,7 @@
 //         break;
 //     default:
 //         console.log("Такого количества звезд нет");
-        
+
 // }
 // console.log(price);
 
@@ -127,9 +126,7 @@
 // else { console.log("На счете недостаточно средств для проведения операции!") }
 // console.log("Операция завершена!")
 
-
 // --------------МАССИВЫ (ARRAYS)---------------
-
 
 // const string = "Real Madrid";
 // for (const character of string) {
@@ -233,8 +230,8 @@
 //     console.log("Операция прошла успешно");
 // }
 
-// withdraw(0, 300); 
-// withdraw(500, 300); 
+// withdraw(0, 300);
+// withdraw(500, 300);
 // withdraw(100, 300);
 
 // const calculateTotalPrice = function (items) {
@@ -281,7 +278,7 @@
 //     name: "Мой супер плейлист",
 //     rating: 5,
 //     tracks: ["трек-1", "трек-2", "трек-3"],
-//     [djName]: trackName, //имя ключа из переменной через [], значение св-ва просто имя переменной 
+//     [djName]: trackName, //имя ключа из переменной через [], значение св-ва просто имя переменной
 //     // getName: function () {
 //     //     console.log('Ага это getName :)');
 //     // },
@@ -497,7 +494,7 @@
 //         const { items } = this;
 
 //         let total = 0;
-    
+
 //         for (const {price, quantity} of items) {
 //             total += price * quantity;
 //         }
@@ -912,7 +909,7 @@
 // const makeSheff = function (name) {
 //     const makeDish = function (dish) {
 //         console.log(`${name} готовит ${dish}`);
-        
+
 //     };
 //     return makeDish;
 // };
@@ -1003,7 +1000,7 @@
 //         this.model = model;
 //         this.price = price;
 // }; // это класс, функция - конструктор
- 
+
 // Car.prototype.changePrice = function (newPrice) { //только у функции-конструктора есть свойство prototype
 //     this.price = newPrice; // свойства накидывают и хранят в прототайпе, а не в функции-конструкторе, чтобы при создании нового объекта не копировались все свойства в новый объект, а так они будут лежить вглубине в одном месте и использоваться по мере надобности!
 // };
@@ -1013,7 +1010,7 @@
 //     brand: 'BMW',
 //     model: 'X6',
 //     price: 50000,
-// }); // это экземпляр 
+// }); // это экземпляр
 
 // console.log(myCar);
 // ___________________________
@@ -1052,3 +1049,563 @@
 
 // console.log(carInstance.model);
 // _________________________________
+
+// const max = 10;
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+
+// function getExtremeElements(array) {
+//   // Change code below this line
+// const first = array.slice(0, 1);
+// const last = array.slice(-1);
+// const extremeEls = first.concat(last);
+// console.log(extremeEls);
+//   // Change code above this line
+// }
+// или
+// function getExtremeElements(array) {
+//   // Change code below this line
+// const first = array.splice(0, 1);
+// const last = array.splice(array.length - 1, 1);
+// const extremeEls = first.concat(last);
+// console.log(extremeEls);
+//   // Change code above this line
+// }
+
+// getExtremeElements([1, 2, 3, 4, 5])
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//     const words = string.split(" ");
+//    let longestWord = words[0];
+
+// for (let i = 0; i < words.length; i += 1) {
+
+//   if (words[i].length > longestWord.length) {
+//     longestWord = words[i];
+//     // console.log(longestWord);
+//   }
+
+// }
+// console.log(longestWord);
+
+//   // Change code above this line
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+// let newArray = [];
+
+//     for (const number of numbers){
+//     console.log(number)
+//   if(number > value) {
+//     newArray.push(number)
+//   }
+// }
+// console.log(newArray)
+
+//   // Change code above this line
+// }
+
+// filterArray([12, 24, 8, 41, 76], 38)
+
+// function includes(array, value) {
+//     // Change code below this line
+
+//     console.log(array)
+//     for (const el of array) {
+//         console.log(el)
+//         if (el === value) {
+//             return true;
+//         }
+
+//     }
+//     return false
+//     // Change code above this line
+// }
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   let prop = []
+// for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//        prop.push(product[propName])
+//    }
+
+// }
+
+// return prop
+//   // Change code above this line
+// }
+
+// console.log(getAllPropValues('category'));
+
+// Change code below this line
+// function add(...args) {
+//     let total = 0;
+//     for (const arg of args) {
+//         total += arg
+//     }
+//     console.log(total)
+//     // Change code above this line
+// }
+
+// add(15, 27)
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//     addPotion(newPotion) {
+//         // console.log(newPotion.name)
+
+//         for (const potion of this.potions) {
+//         console.log(potion.name)
+//     if (potion.name === newPotion.name) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+
+//         }
+//         this.potions.push(newPotion);
+//         console.log(this.potions)
+//   },
+//   removePotion(potionName) {
+//     const {potions} = this;
+//   for (let i = 0; i < potions.length; i += 1) {
+//     const {name} = potions[i];
+//     if (potionName === name) {
+//       potions.splice(i, 1)
+//     }
+//   }
+
+//   },
+//   updatePotionName(oldName, newName) {
+
+// for (const potion of this.potions) {
+// if(potion.name === oldName) {
+//   potion.name = newName;
+// }
+// }
+
+//   },
+//   // Change code above this line
+// };
+
+// atTheOldToad.addPotion({ name: "Dragon breath", price: 700 })
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+
+// console.log(tags)
+
+// // Вынесем callback-функцию отдельно, а в reducе передадим ссылку на нее.
+// // Это стандартная практика если callback-функция довольно большая.
+
+// // Если в объекте-аккумуляторе acc нету своего свойства с ключем tag,
+// // то создаем его и записывает ему значение 0.
+// // В противном случае увеличиваем значение на 1.
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+
+//   acc[tag] += 1;
+
+//   return acc;
+// };
+
+// // Начальное значение аккумулятора это пустой объект {}
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+// const pizzaPalace = {
+//     pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//     order(pizzaName, onSuccess, onError) {
+//         if (!this.pizzas.includes(pizzaName)) {
+//             return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//         };
+//         return onSuccess(pizzaName);
+//     },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//     return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+// function changeEven(numbers, value) {
+//     // Change code below this line
+//     let newArray = [];
+
+//     numbers.forEach(number => {
+//         if (number % 2 === 0) {
+//             console.log(number + value)
+//             newArray.push(number + value);
+//             return
+//         }
+
+//             console.log(number)
+//             newArray.push(number)
+
+//     })
+//     return newArray;
+//     // Change code above this line
+// }
+
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100))
+
+// const getFriends = (users) => {
+
+//     const friends = users.flatMap(user => user.friends
+//     );
+//     console.log(friends);
+//     const uniqueFriends = friends.filter((friend, index, array) =>
+//            array.indexOf(friend) === index
+//    );
+
+//    return uniqueFriends;
+// };
+
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39
+//   }
+// ]
+
+// // console.log(getFriends(users));
+
+// const getInactiveUsers = (users) => {
+//    let inactiveUsers = [];
+//    users.filter(user => {
+//        if (!user.isActive) {
+//            inactiveUsers.push(user)
+//        }
+//    })
+//    return inactiveUsers
+// };
+
+// console.log(getInactiveUsers(users))
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = books.filter(book => book.rating > MIN_BOOK_RATING).sort((firstBook, secondBook) => firstBook.author.localeCompare(secondBook.author));
+
+// console.log(names)
+
+// const getTotalBalanceByGender = (users, gender) => {
+
+//     return users.filter(user => user.gender === gender).reduce((total, user) => {
+//      return total += user.balance
+//    }, 0)
+// };
+
+// console.log(getTotalBalanceByGender(users, "male"))
+
+// class Storage {
+//     constructor (array) {
+//       this.items = array
+//     }
+//     getItems() {
+//         return this.items
+//     }
+//     addItem(newItem) {
+//         this.items.push(newItem)
+//     }
+//     removeItem(itemToRemove) {
+//         const indexOfItem = this.items.indexOf(itemToRemove);
+//         return this.items.splice(indexOfItem, 1)
+//     }
+// }
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// class StringBuilder {
+//   constructor (initialValue) {
+//     this.value = initialValue
+//   }
+//   getValue() {
+//     return this.value
+//   }
+//   padEnd(str) {
+//       console.log(this.value += str)
+//   }
+//   padStart(str) {
+//       console.log(this.value = str + this.value)
+//   }
+//   padBoth(str) {
+//       console.log(this.value = str + this.value + str)
+//   }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// const array = [1, 2, 3, 4, 5]
+
+// // console.log(array.sort((a, b) => b - a))
+// let newArray = [];
+// for (let i = array.length - 1; i >= 0; i -= 1) {
+//     newArray.push(array[i])
+
+// }
+// console.log(newArray)
+
+const refs = {
+  watchedBtn: document.querySelector('.add-to-watched'),
+  queueBtn: document.querySelector('.add-to-queue'),
+  spanMovieName: document.querySelector('.span'),
+};
+
+const API_KEY = 'a4bc470e2c9f83a606b7ff9bda48baef';
+const BASE_URL = 'https://api.themoviedb.org/3/movie/';
+// const movieId = 17; //значение айди должно браться из свойства Класса (?), которое будет записываться в методе класса, который приносит
+// полную инфу о фильме при нажатии на модалку (открытие карточки о фильме)
+
+class Api {
+  constructor() {
+    this.movieId = 5;
+  }
+  async fetchById() {
+    try {
+      const response = await fetch(
+        `${BASE_URL}${this.movieId}?api_key=${API_KEY}`,
+      );
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  getItemFromLS(key) {
+    return localStorage.getItem(key);
+  }
+
+  setItemInLS(key, value) {
+    return localStorage.setItem(key, JSON.stringify(value));
+  }
+
+  addMovie(movieObj, key) {
+    let existingEntries = JSON.parse(this.getItemFromLS(key));
+    if (existingEntries === null) existingEntries = [];
+
+    existingEntries.push(movieObj);
+
+    return localStorage.setItem(key, JSON.stringify(existingEntries));
+  }
+
+  deleteMovie(key) {
+    let existingEntries = JSON.parse(this.getItemFromLS(key));
+
+    const newEntries = existingEntries.filter(el => el.id !== this.movieId);
+    existingEntries = newEntries;
+
+    return localStorage.setItem(key, JSON.stringify(existingEntries));
+  }
+}
+
+const api = new Api();
+
+const onClickHandle = async e => {
+  const movie = await api.fetchById().then(data => data);
+
+  if (movie.success === false) {
+    return;
+  }
+
+  if (e.target.dataset.watch) {
+    if (e.target.dataset.add) {
+      switchWatchAddAttr();
+      return api.addMovie(movie, e.target.dataset.watch);
+    }
+    switchWatchRemoveAttr();
+    return api.deleteMovie(e.target.dataset.watch);
+  }
+
+  if (e.target.dataset.queue) {
+    if (e.target.dataset.add) {
+      switchQueueAddAttr();
+      return api.addMovie(movie, e.target.dataset.queue);
+    }
+    switchQueueRemoveAttr();
+    return api.deleteMovie(e.target.dataset.queue);
+  }
+};
+
+refs.watchedBtn.addEventListener('click', onClickHandle);
+
+refs.queueBtn.addEventListener('click', onClickHandle);
+
+const switchWatchAddAttr = () => {
+  refs.watchedBtn.removeAttribute('data-add');
+  refs.watchedBtn.setAttribute('data-remove', 'remove');
+  refs.watchedBtn.textContent = 'Delete from watched';
+};
+
+const switchWatchRemoveAttr = () => {
+  refs.watchedBtn.removeAttribute('data-remove');
+  refs.watchedBtn.setAttribute('data-add', 'add');
+  refs.watchedBtn.textContent = 'Add to watched';
+};
+
+const switchQueueAddAttr = () => {
+  refs.queueBtn.removeAttribute('data-add');
+  refs.queueBtn.setAttribute('data-remove', 'remove');
+  refs.queueBtn.textContent = 'Delete from queued';
+};
+
+const switchQueueRemoveAttr = () => {
+  refs.queueBtn.removeAttribute('data-remove');
+  refs.queueBtn.setAttribute('data-add', 'add');
+  refs.queueBtn.textContent = 'Add to queued';
+};
+
+// localStorage.clear();
