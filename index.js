@@ -1599,13 +1599,13 @@ const switchWatchRemoveAttr = () => {
 const switchQueueAddAttr = () => {
   refs.queueBtn.removeAttribute('data-add');
   refs.queueBtn.setAttribute('data-remove', 'remove');
-  refs.queueBtn.textContent = 'Delete from queued';
+  refs.queueBtn.textContent = 'Delete from queue';
 };
 
 const switchQueueRemoveAttr = () => {
   refs.queueBtn.removeAttribute('data-remove');
   refs.queueBtn.setAttribute('data-add', 'add');
-  refs.queueBtn.textContent = 'Add to queued';
+  refs.queueBtn.textContent = 'Add to queue';
 };
 
 // localStorage.clear();
