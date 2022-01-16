@@ -1578,6 +1578,37 @@ const switchQueueRemoveAttr = () => {
   refs.queueBtn.textContent = 'Add to queue';
 };
 
+// вызвать две функции ниже поочередно в файле film-description-modal.js
+// на 16 строке внутри функции по открытию модалки сдвинув return ниже
+
+const checkWatchedLS = () => {
+  const LSwatchedItems = api.getItemFromLS('watched');
+
+  if ((LSwatchedItems.length = 0 || null)) {
+    return;
+  }
+  LSwatchedItems.map(item => {
+    if (item.id === this.movieId) {
+      switchWatchAddAttr();
+      return;
+    }
+  });
+};
+
+const checkQueueLS = () => {
+  const LSQueueItems = api.getItemFromLS('queue');
+
+  if ((LSQueueItems.length = 0 || null)) {
+    return;
+  }
+  LSQueueItems.map(item => {
+    if (item.id === this.movieId) {
+      switchQueueAddAttr();
+      return;
+    }
+  });
+};
+
 const onClickHandle = async e => {
   const movie = await api.fetchById().then(data => data);
 
