@@ -1554,6 +1554,30 @@ class Api {
 
 const api = new Api();
 
+const switchWatchAddAttr = () => {
+  refs.watchedBtn.removeAttribute('data-add');
+  refs.watchedBtn.setAttribute('data-remove', 'remove');
+  refs.watchedBtn.textContent = 'Delete from watched';
+};
+
+const switchWatchRemoveAttr = () => {
+  refs.watchedBtn.removeAttribute('data-remove');
+  refs.watchedBtn.setAttribute('data-add', 'add');
+  refs.watchedBtn.textContent = 'Add to watched';
+};
+
+const switchQueueAddAttr = () => {
+  refs.queueBtn.removeAttribute('data-add');
+  refs.queueBtn.setAttribute('data-remove', 'remove');
+  refs.queueBtn.textContent = 'Delete from queue';
+};
+
+const switchQueueRemoveAttr = () => {
+  refs.queueBtn.removeAttribute('data-remove');
+  refs.queueBtn.setAttribute('data-add', 'add');
+  refs.queueBtn.textContent = 'Add to queue';
+};
+
 const onClickHandle = async e => {
   const movie = await api.fetchById().then(data => data);
 
@@ -1583,29 +1607,5 @@ const onClickHandle = async e => {
 refs.watchedBtn.addEventListener('click', onClickHandle);
 
 refs.queueBtn.addEventListener('click', onClickHandle);
-
-const switchWatchAddAttr = () => {
-  refs.watchedBtn.removeAttribute('data-add');
-  refs.watchedBtn.setAttribute('data-remove', 'remove');
-  refs.watchedBtn.textContent = 'Delete from watched';
-};
-
-const switchWatchRemoveAttr = () => {
-  refs.watchedBtn.removeAttribute('data-remove');
-  refs.watchedBtn.setAttribute('data-add', 'add');
-  refs.watchedBtn.textContent = 'Add to watched';
-};
-
-const switchQueueAddAttr = () => {
-  refs.queueBtn.removeAttribute('data-add');
-  refs.queueBtn.setAttribute('data-remove', 'remove');
-  refs.queueBtn.textContent = 'Delete from queue';
-};
-
-const switchQueueRemoveAttr = () => {
-  refs.queueBtn.removeAttribute('data-remove');
-  refs.queueBtn.setAttribute('data-add', 'add');
-  refs.queueBtn.textContent = 'Add to queue';
-};
 
 // localStorage.clear();
